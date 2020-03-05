@@ -73,6 +73,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GoTAPI.Data\GoTAPI.Data.csproj">
+      <Project>{C8CCFAA2-001B-417C-982D-AF9CA56B6EAA}</Project>
+      <Name>GoTAPI.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
