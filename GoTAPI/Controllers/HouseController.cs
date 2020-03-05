@@ -35,7 +35,9 @@ namespace GoTAPI.Controllers
         [HttpGet]
         public IHttpActionResult Get(int houseId)
         {
-
+            HouseService houseService = CreateHouseService();
+            var houses = houseService.ReadHouseById(houseId);
+            return Ok(houses);
         }
         [HttpPut]
         public IHttpActionResult Put([FromUri]int houseId, [FromBody] HouseUpdate model)

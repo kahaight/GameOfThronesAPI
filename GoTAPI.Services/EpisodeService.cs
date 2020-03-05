@@ -9,6 +9,11 @@ namespace GoTAPI.Services
 {
     public class EpisodeService
     {
+        private readonly Guid _userId;
+        public EpisodeService(Guid userId)
+        {
+            _userId = userId;
+        }
         public bool CreateEpisode(EpisodeCreate model)
         {
 

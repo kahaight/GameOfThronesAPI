@@ -35,7 +35,7 @@ namespace GoTAPI.Services
             }
         }
 
-    /*    public IEnumerable<HouseListItem> ReadHouses()
+       public IEnumerable<HouseListItem> ReadHouses()
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -50,15 +50,39 @@ namespace GoTAPI.Services
             }
         }
 
-        public HouseDetail ReadHouseById()
+        public HouseDetail ReadHouseById(int houseId)
         {
-           
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Houses.Single(e => e.Id == houseId);
+                return new HouseDetail
+                {
+                    Id = entity.Id,
+                    Name = entity.Name,
+                    Sigil = entity.Sigil,
+                    Words = entity.Words,
+                    Region = entity.Region,
+                    Characters = entity.Characters
+
+                };
+            }
         }
 
         public bool UpdateHouse(HouseUpdate model)
         {
-
-        }*/
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                       .Houses
+                       .Single(e => e.Id == model.Id);
+                entity.Name = model.Name;
+                entity.Sigil = model.Sigil;
+                entity.Words = model.Words;
+                entity.Region = model.Region;
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
         public bool DeleteHouse(int houseId)
         {
