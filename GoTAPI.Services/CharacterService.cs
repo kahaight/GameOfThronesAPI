@@ -9,6 +9,11 @@ namespace GoTAPI.Services
 {
     public class CharacterService
     {
+        private readonly Guid _userId;
+        public CharacterService(Guid userId)
+        {
+            _userId = userId;
+        }
         public bool CreateCharacter(CharacterCreate model)
         {
 

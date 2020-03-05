@@ -8,6 +8,7 @@ namespace GoTAPI.Models.HouseModels
 {
     public class HouseUpdate
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Sigil { get; set; }
         public string Words { get; set; }

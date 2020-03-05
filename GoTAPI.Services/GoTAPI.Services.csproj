@@ -65,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GoTAPI.Data\GoTAPI.Data.csproj">
+      <Project>{C8CCFAA2-001B-417C-982D-AF9CA56B6EAA}</Project>
+      <Name>GoTAPI.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoTAPI.Models\GoTAPI.Models.csproj">
       <Project>{43A55D44-7B23-4A3A-B242-22B001407607}</Project>
       <Name>GoTAPI.Models</Name>

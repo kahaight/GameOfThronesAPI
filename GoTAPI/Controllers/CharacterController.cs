@@ -33,7 +33,8 @@ namespace GoTAPI.Controllers
         {
 
         }
-        public IHttpActionResult Put([FromUri]int characterId, [FromBody] Character model)
+        [HttpPut]
+        public IHttpActionResult Put([FromUri]int characterId, [FromBody] CharacterUpdate model)
         {
 
         }
