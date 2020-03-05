@@ -54,11 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterEpisodeService.cs" />
+    <Compile Include="CharacterService.cs" />
+    <Compile Include="EpisodeService.cs" />
+    <Compile Include="HouseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoTAPI.Models\GoTAPI.Models.csproj">
+      <Project>{43A55D44-7B23-4A3A-B242-22B001407607}</Project>
+      <Name>GoTAPI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -54,17 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterEpisodeModels\CharacterEpisodeCreate.cs" />
+    <Compile Include="CharacterModels\CharacterCreate.cs" />
+    <Compile Include="CharacterModels\CharacterDetail.cs" />
+    <Compile Include="CharacterModels\CharacterUpdate.cs" />
+    <Compile Include="CharacterModels\CharacterListItem.cs" />
+    <Compile Include="EpisodeModels\EpisodeCreate.cs" />
+    <Compile Include="EpisodeModels\EpisodeDetail.cs" />
+    <Compile Include="EpisodeModels\EpisodeUpdate.cs" />
+    <Compile Include="EpisodeModels\EpisodeListItem.cs" />
     <Compile Include="HouseModels\HouseCreate.cs" />
+    <Compile Include="HouseModels\HouseDetail.cs" />
+    <Compile Include="HouseModels\HouseUpdate.cs" />
+    <Compile Include="HouseModels\HouseListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CharacterEpisodeModels\" />
-    <Folder Include="CharacterModels\" />
-    <Folder Include="EpisodeModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
