@@ -29,8 +29,11 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpGet]
-       /* public IHttpActionResult Get()
+        public IHttpActionResult Get()
         {
+            HouseService houseService = CreateHouseService();
+            var houses = houseService.ReadHouses();
+            return Ok(houses);
         }
         [HttpGet]
         public IHttpActionResult Get(int houseId)
@@ -40,11 +43,16 @@ namespace GoTAPI.Controllers
             return Ok(houses);
         }
         [HttpPut]
-        public IHttpActionResult Put([FromUri]int houseId, [FromBody] HouseUpdate model)
+        public IHttpActionResult Put(HouseUpdate model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateHouseService();
+            if (!service.UpdateHouse(model))
+                return InternalServerError();
+            return Ok();
+        }
 
-        }*/
-        
         public IHttpActionResult Delete(int id)
         {
             var service = CreateHouseService();
