@@ -19,24 +19,24 @@ namespace GoTAPI.Controllers
             var episodeService = new EpisodeService(userId);
             return episodeService;
         }
-        [HttpPost]
-        public IHttpActionResult Post(EpisodeCreate episode)
-        {
+        //[HttpPost]
+        //public IHttpActionResult Post(EpisodeCreate episode)
+        //{
 
-        }
-        [HttpGet]
-        public IHttpActionResult Get()
-        {
-        }
-        [HttpGet]
-        public IHttpActionResult Get(int episodeId)
-        {
+        //}
+        //[HttpGet]
+        //public IHttpActionResult Get()
+        //{
+        //}
+        //[HttpGet]
+        //public IHttpActionResult Get(int episodeId)
+        //{
 
-        }
-        [HttpPut]
-        public IHttpActionResult Put([FromUri]int episodeId, [FromBody] EpisodeUpdate model)
-        {
+        //}
+        //[HttpPut]
+        //public IHttpActionResult Put([FromUri]int episodeId, [FromBody] EpisodeUpdate model)
+        //{
 
-        }
+        //}
     }
 }

@@ -10,13 +10,13 @@ namespace GoTAPI.Services
     public class CharacterEpisodeService
     {
         private readonly Guid _userId;
-        public CharacterService(Guid userId)
+        public CharacterEpisodeService(Guid userId)
         {
             _userId = userId;
         }
-        public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
-        {
+        //public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
+        //{
 
-        }
+        //}
     }
 }

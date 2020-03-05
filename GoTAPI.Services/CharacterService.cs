@@ -14,26 +14,26 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-        public bool CreateCharacter(CharacterCreate model)
-        {
+        //public bool CreateCharacter(CharacterCreate model)
+        //{
 
-        }
+        //}
 
-        public IEnumerable<CharacterListItem> ReadCharacters()
-        {
+        //public IEnumerable<CharacterListItem> ReadCharacters()
+        //{
 
-        }
-        public CharacterDetail ReadCharacterById()
-        {
+        //}
+        //public CharacterDetail ReadCharacterById()
+        //{
 
-        }
-        public bool UpdateCharacter(CharacterUpdate model)
-        {
+        //}
+        //public bool UpdateCharacter(CharacterUpdate model)
+        //{
 
-        }
-        public bool DeleteCharacter(int houseId)
-        {
+        //}
+        //public bool DeleteCharacter(int houseId)
+        //{
 
-        }
+        //}
     }
 }

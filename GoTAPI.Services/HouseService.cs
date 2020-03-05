@@ -22,7 +22,6 @@ namespace GoTAPI.Services
             var entity =
                 new House()
                 {
-                    //name, sigil, words, region
                     Name = model.Name,
                     Sigil = model.Sigil,
                     Words = model.Words,

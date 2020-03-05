@@ -19,24 +19,24 @@ namespace GoTAPI.Controllers
             var characterService = new CharacterService(userId);
             return characterService;
         }
-        [HttpPost]
-        public IHttpActionResult Post(CharacterCreate character)
-        {
+        //[HttpPost]
+        //public IHttpActionResult Post(CharacterCreate character)
+        //{
 
-        }
-        [HttpGet]
-        public IHttpActionResult Get()
-        {
-        }
-        [HttpGet]
-        public IHttpActionResult Get(int characterId)
-        {
+        //}
+        //[HttpGet]
+        //public IHttpActionResult Get()
+        //{
+        //}
+        //[HttpGet]
+        //public IHttpActionResult Get(int characterId)
+        //{
 
-        }
-        [HttpPut]
-        public IHttpActionResult Put([FromUri]int characterId, [FromBody] CharacterUpdate model)
-        {
+        //}
+        //[HttpPut]
+        //public IHttpActionResult Put([FromUri]int characterId, [FromBody] CharacterUpdate model)
+        //{
 
-        }
+        //}
     }
 }

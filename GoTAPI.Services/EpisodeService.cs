@@ -14,26 +14,26 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-        public bool CreateEpisode(EpisodeCreate model)
-        {
+        //public bool CreateEpisode(EpisodeCreate model)
+        //{
 
-        }
+        //}
 
-        public IEnumerable<EpisodeListItem> ReadEpisodes()
-        {
+        //public IEnumerable<EpisodeListItem> ReadEpisodes()
+        //{
 
-        }
-        public EpisodeDetail ReadEpisodeById()
-        {
+        //}
+        //public EpisodeDetail ReadEpisodeById()
+        //{
 
-        }
-        public bool UpdateEpisode(EpisodeUpdate model)
-        {
+        //}
+        //public bool UpdateEpisode(EpisodeUpdate model)
+        //{
 
-        }
-        public bool DeleteEpisode(int houseId)
-        {
+        //}
+        //public bool DeleteEpisode(int houseId)
+        //{
 
-        }
+        //}
     }
 }

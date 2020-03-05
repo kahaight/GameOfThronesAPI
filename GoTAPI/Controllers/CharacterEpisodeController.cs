@@ -18,10 +18,10 @@ namespace GoTAPI.Controllers
             var characterEpisodeService = new CharacterEpisodeService(userId);
             return characterEpisodeService;
         }
-        [HttpPost]
-        public IHttpActionResult Post(CharacterEpisodeCreate model)
-        {
+        //[HttpPost]
+        //public IHttpActionResult Post(CharacterEpisodeCreate model)
+        //{
 
-        }
+        //}
     }
 }
