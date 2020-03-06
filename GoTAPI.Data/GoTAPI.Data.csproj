@@ -96,6 +96,10 @@
     <Compile Include="Migrations\202003052051348_InitalMigration.designer.cs">
       <DependentUpon>202003052051348_InitalMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003061451469_RemoveHouseCauseOfDeath.cs" />
+    <Compile Include="Migrations\202003061451469_RemoveHouseCauseOfDeath.designer.cs">
+      <DependentUpon>202003061451469_RemoveHouseCauseOfDeath.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,6 +110,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003052051348_InitalMigration.resx">
       <DependentUpon>202003052051348_InitalMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003061451469_RemoveHouseCauseOfDeath.resx">
+      <DependentUpon>202003061451469_RemoveHouseCauseOfDeath.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
