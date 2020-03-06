@@ -53,6 +53,7 @@ namespace GoTAPI.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                var characterService = new CharacterService();
                 var entity = ctx.Houses.Single(e => e.Id == houseId);
                 return new HouseDetail
                 {
@@ -61,9 +62,11 @@ namespace GoTAPI.Services
                     Sigil = entity.Sigil,
                     Words = entity.Words,
                     Region = entity.Region,
-                    Characters = entity.Characters
+                    Characters = characterService.ConvertCharsToListItems(entity.Characters)
 
                 };
+                
+                
             }
         }
 

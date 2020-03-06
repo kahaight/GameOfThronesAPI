@@ -22,8 +22,8 @@
 
             context.Houses.AddOrUpdate(
                 h => h.Name,
-                new House { Name = "Stark", Sigil = "A grey direwolf on a white field", Words = "Winter Is Coming" },
-                new House { Name = "Lannister", Sigil = "A golden lion rampant on a crimson field", Words = "Hear Me Roar" },
+                new House { Name = "Stark", Sigil = "A grey direwolf on a white field", Words = "Winter Is Coming", Region = "The North" },
+                new House { Name = "Lannister", Sigil = "A golden lion rampant on a crimson field", Words = "Hear Me Roar", Region = "The Westerlands" },
                 new House { Name = "Targaryen", Sigil = "A red three-headed dragon, on a black field", Words = "Fire and Blood" },
                 new House { Name = "Baratheon", Sigil = "A crowned black stag salient on a gold field", Words = "Ours Is the Fury", Region = "The Stormlands" },
                 new House { Name = "Baratheon of King's Landing", Sigil = "The crowned stag of Baratheon black on gold and the lion of Lannister golden on red", Words = "Ours Is the Fury", Region = "The Crownlands" },
