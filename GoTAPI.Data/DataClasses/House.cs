@@ -13,7 +13,6 @@ namespace GoTAPI.Data.DataClasses
         public string Sigil { get; set; }
         public string Words { get; set; }
         public string Region { get; set; }
-        public string CauseOfDeath { get; set; }
         public virtual ICollection<Character> Characters { get; set; }
 
         public House() { }
@@ -23,7 +22,6 @@ namespace GoTAPI.Data.DataClasses
             Sigil = sigil;
             Words = words;
             Region = region;
-            CauseOfDeath = causeOfDeath;
         }
     }
 }
