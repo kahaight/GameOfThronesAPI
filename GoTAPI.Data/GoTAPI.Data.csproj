@@ -108,6 +108,10 @@
     <Compile Include="Migrations\202003062333425_returnIcollection.designer.cs">
       <DependentUpon>202003062333425_returnIcollection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003070021489_AddedCharacterEpisodeAndEpisodeClass.cs" />
+    <Compile Include="Migrations\202003070021489_AddedCharacterEpisodeAndEpisodeClass.designer.cs">
+      <DependentUpon>202003070021489_AddedCharacterEpisodeAndEpisodeClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003062333425_returnIcollection.resx">
       <DependentUpon>202003062333425_returnIcollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003070021489_AddedCharacterEpisodeAndEpisodeClass.resx">
+      <DependentUpon>202003070021489_AddedCharacterEpisodeAndEpisodeClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

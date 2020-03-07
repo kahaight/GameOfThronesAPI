@@ -27,17 +27,6 @@ namespace GoTAPI.Services
 
         //}
 
-        public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
-        {
-                var query = characters.Select(
-                            e =>
-                                new CharacterListItem
-                                {
-                                    Name = e.Name
-                                }
-                        );
-                return query.ToArray();
-        }
         //public CharacterDetail ReadCharacterById()
         //{
 
@@ -50,5 +39,16 @@ namespace GoTAPI.Services
         //{
 
         //}
+        public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
+        {
+                var query = characters.Select(
+                            e =>
+                                new CharacterListItem
+                                {
+                                    Name = e.Name
+                                }
+                        );
+                return query.ToArray();
+        }
     }
 }

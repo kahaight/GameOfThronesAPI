@@ -49,12 +49,12 @@ namespace GoTAPI.Services
             }
         }
 
-        public HouseDetail ReadHouseById(int houseId)
+        public HouseDetail ReadHouseById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var characterService = new CharacterService();
-                var entity = ctx.Houses.Single(e => e.Id == houseId);
+                var entity = ctx.Houses.Single(e => e.Id == id);
                 return new HouseDetail
                 {
                     Id = entity.Id,
