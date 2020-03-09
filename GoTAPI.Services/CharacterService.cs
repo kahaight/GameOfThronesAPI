@@ -52,10 +52,28 @@ namespace GoTAPI.Services
                 return query.ToArray();
             }
         }
-        //public CharacterDetail ReadCharacterById()
-        //{
+        public CharacterDetail ReadCharacterById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var characterEpisodeService = new CharacterEpisodeService();
+                var entity = ctx.Characters.Single(e => e.Id == id);
+                return new CharacterDetail
+                {
+                    Id = entity.Id,
+                    Name = entity.Name,
+                    Alive = entity.Alive,
+                    EpisodeOfDeath = entity.EpisodeOfDeath,
+                    House = entity.House.Name,
+                    Gender = entity.Gender,
+                    Actor = entity.Actor,
+                    CauseOfDeath = entity.CauseOfDeath,
+                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
+                };
 
-        //}
+
+            }
+        }
         //public bool UpdateCharacter(CharacterUpdate model)
         //{
 
