@@ -25,18 +25,29 @@ namespace GoTAPI.Controllers
 
         //}
         //[HttpGet]
-        //public IHttpActionResult Get()
-        //{
-        //}
+        public IHttpActionResult Get()
+        {
+            CharacterService characterService = CreateCharacterService();
+            var characters = characterService.ReadCharacters();
+            return Ok(characters);
+        }
+     
         //[HttpGet]
-        //public IHttpActionResult Get(int characterId)
-        //{
-
-        //}
-        //[HttpPut]
-        //public IHttpActionResult Put([FromUri]int characterId, [FromBody] CharacterUpdate model)
-        //{
-
-        //}
+        public IHttpActionResult Get(int id)
+        {
+            CharacterService characterService = CreateCharacterService();
+            var character = characterService.ReadCharacterById(id);
+            return Ok(character);
+        }
+        [HttpPut]
+        public IHttpActionResult Put(CharacterUpdate model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateCharacterService();
+            if (!service.UpdateCharacter(model))
+                return InternalServerError();
+            return Ok();
+        }
     }
 }

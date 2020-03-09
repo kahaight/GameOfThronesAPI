@@ -8,5 +8,6 @@ namespace GoTAPI.Models.EpisodeModels
 {
     public class EpisodeListItem
     {
+        public string Title { get; set; }
     }
 }

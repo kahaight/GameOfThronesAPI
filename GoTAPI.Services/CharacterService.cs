@@ -1,9 +1,7 @@
 ﻿using GoTAPI.Data.DataClasses;
-<<<<<<< HEAD
 using GoTAPI.Models;
-=======
->>>>>>> 29ec58678564f71f831f279818003d419b557dcf
 using GoTAPI.Models.CharacterModels;
+using GoTAPI.Models.HouseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +30,7 @@ namespace GoTAPI.Services
                     Gender = model.Gender,
                     Actor = model.Actor,
                     CauseOfDeath = model.CauseOfDeath,
-                    HouseId=model.HouseI
+                    HouseId=model.HouseId
                 };
             using (var ctx=new ApplicationDbContext())
             {
@@ -55,28 +53,63 @@ namespace GoTAPI.Services
                 return query.ToArray();
             }
         } 
-        //public CharacterDetail ReadCharacterById()
-        //{
+        public CharacterDetail ReadCharacterById(int id)
+        {
+            using (var ctx =new ApplicationDbContext())
+            {
+                var characterEpisodeService = new CharacterEpisodeService();
+                var entity = ctx.Characters.Single(e => e.Id == id);
+                return new CharacterDetail
+                {
+                    Id = entity.Id,
+                    Name=entity.Name,
+                    Alive = entity.Alive,
+                    EpisodeOfDeath = entity.EpisodeOfDeath,
+                    House = entity.House.Name,
+                    Gender = entity.Gender,
+                    Actor = entity.Actor,
+                    CauseOfDeath = entity.CauseOfDeath,
+                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
+                };
+            }
 
-        //}
-        //public bool UpdateCharacter(CharacterUpdate model)
-        //{
+        }
 
-        //}
+        public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
+        {
+            var query = characters.Select(
+                        e =>
+                            new CharacterListItem
+                            {
+                                Name = e.Name
+                            }
+                    );
+            return query.ToArray();
+        }
+        
+        public bool UpdateCharacter(CharacterUpdate model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                       .Characters
+                       .Single(e => e.Id == model.Id);
+                entity.Name = model.Name;
+                entity.Alive = model.Alive;
+                entity.EpisodeOfDeath = model.EpisodeOfDeath;
+                entity.HouseId = model.HouseId;
+                entity.Gender = model.Gender;
+                entity.Actor = model.Actor;
+                entity.CauseOfDeath = model.CauseOfDeath;
+   /*             characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes) = model.characterEpisodes;*/
+                return ctx.SaveChanges() == 1;
+            }
+        }
         //public bool DeleteCharacter(int houseId)
         //{
 
         //}
-        public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
-        {
-                var query = characters.Select(
-                            e =>
-                                new CharacterListItem
-                                {
-                                    Name = e.Name
-                                }
-                        );
-                return query.ToArray();
-        }
+     
     }
 }
