@@ -49,11 +49,12 @@ namespace GoTAPI.Services
             }
         }
 
-        public HouseDetail ReadHouseById(int houseId)
+        public HouseDetail ReadHouseById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Houses.Single(e => e.Id == houseId);
+                var characterService = new CharacterService();
+                var entity = ctx.Houses.Single(e => e.Id == id);
                 return new HouseDetail
                 {
                     Id = entity.Id,
@@ -61,9 +62,11 @@ namespace GoTAPI.Services
                     Sigil = entity.Sigil,
                     Words = entity.Words,
                     Region = entity.Region,
-                    Characters = entity.Characters
+                    Characters = characterService.ConvertCharsToListItems(entity.Characters)
 
                 };
+                
+                
             }
         }
 

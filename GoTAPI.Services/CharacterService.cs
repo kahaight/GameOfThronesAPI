@@ -1,5 +1,8 @@
 ﻿using GoTAPI.Data.DataClasses;
+<<<<<<< HEAD
 using GoTAPI.Models;
+=======
+>>>>>>> 29ec58678564f71f831f279818003d419b557dcf
 using GoTAPI.Models.CharacterModels;
 using System;
 using System.Collections.Generic;
@@ -12,6 +15,8 @@ namespace GoTAPI.Services
     public class CharacterService
     {
         private readonly Guid _userId;
+
+        public CharacterService() { }
         public CharacterService(Guid userId)
         {
             _userId = userId;
@@ -37,6 +42,7 @@ namespace GoTAPI.Services
 
         }
 
+<<<<<<< HEAD
         public IEnumerable<CharacterListItem> ReadCharacters()
         {
             using (var ctx = new ApplicationDbContext())
@@ -50,6 +56,13 @@ namespace GoTAPI.Services
                         })
             }
         }
+=======
+        //public IEnumberable<CharacterListItem> ReadCharacters()
+        //{
+
+        //}
+
+>>>>>>> 29ec58678564f71f831f279818003d419b557dcf
         //public CharacterDetail ReadCharacterById()
         //{
 
@@ -62,5 +75,16 @@ namespace GoTAPI.Services
         //{
 
         //}
+        public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
+        {
+                var query = characters.Select(
+                            e =>
+                                new CharacterListItem
+                                {
+                                    Name = e.Name
+                                }
+                        );
+                return query.ToArray();
+        }
     }
 }
