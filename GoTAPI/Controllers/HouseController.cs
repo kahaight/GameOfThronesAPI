@@ -52,7 +52,7 @@ namespace GoTAPI.Controllers
                 return InternalServerError();
             return Ok();
         }
-
+        [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateHouseService();

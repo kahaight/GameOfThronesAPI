@@ -30,7 +30,7 @@ namespace GoTAPI.Services
                     Gender = model.Gender,
                     Actor = model.Actor,
                     CauseOfDeath = model.CauseOfDeath,
-                    HouseId=model.HouseId
+                    HouseId = model.HouseId
                 };
             using (var ctx=new ApplicationDbContext())
             {
@@ -72,9 +72,38 @@ namespace GoTAPI.Services
                     Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
                 };
             }
-
         }
-
+      
+        public bool UpdateCharacter(CharacterUpdate model)
+        {
+          using (var ctx = new ApplicationDbContext())
+          {
+            var entity = 
+                        ctx
+                       .Characters
+                       .Single(e => e.Id == model.Id);
+                entity.Name = model.Name;
+                entity.Alive = model.Alive;
+                entity.EpisodeOfDeath = model.EpisodeOfDeath;
+                entity.HouseId = model.HouseId;
+                entity.Gender = model.Gender;
+                entity.Actor = model.Actor;
+                entity.CauseOfDeath = model.CauseOfDeath;
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteCharacter(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Characters
+                        .Single(e => e.Id == id);
+                ctx.Characters.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
         {
             var query = characters.Select(
@@ -86,30 +115,5 @@ namespace GoTAPI.Services
                     );
             return query.ToArray();
         }
-        
-        public bool UpdateCharacter(CharacterUpdate model)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                       .Characters
-                       .Single(e => e.Id == model.Id);
-                entity.Name = model.Name;
-                entity.Alive = model.Alive;
-                entity.EpisodeOfDeath = model.EpisodeOfDeath;
-                entity.HouseId = model.HouseId;
-                entity.Gender = model.Gender;
-                entity.Actor = model.Actor;
-                entity.CauseOfDeath = model.CauseOfDeath;
-   /*             characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes) = model.characterEpisodes;*/
-                return ctx.SaveChanges() == 1;
-            }
-        }
-        //public bool DeleteCharacter(int houseId)
-        //{
-
-        //}
-     
     }
 }

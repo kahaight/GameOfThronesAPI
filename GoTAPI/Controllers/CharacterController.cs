@@ -19,20 +19,25 @@ namespace GoTAPI.Controllers
             var characterService = new CharacterService(userId);
             return characterService;
         }
-        //[HttpPost]
-        //public IHttpActionResult Post(CharacterCreate character)
-        //{
-
-        //}
-        //[HttpGet]
+        [HttpPost]
+        public IHttpActionResult Post(CharacterCreate character)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateCharacterService();
+            if (!service.CreateCharacter(character))
+                return InternalServerError();
+            return Ok();
+        }
+        [HttpGet]
         public IHttpActionResult Get()
         {
             CharacterService characterService = CreateCharacterService();
             var characters = characterService.ReadCharacters();
             return Ok(characters);
         }
-     
-        //[HttpGet]
+
+        [HttpGet]
         public IHttpActionResult Get(int id)
         {
             CharacterService characterService = CreateCharacterService();
@@ -46,6 +51,14 @@ namespace GoTAPI.Controllers
                 return BadRequest(ModelState);
             var service = CreateCharacterService();
             if (!service.UpdateCharacter(model))
+                return InternalServerError();
+        }
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateCharacterService();
+
+            if (!service.DeleteCharacter(id))
                 return InternalServerError();
             return Ok();
         }
