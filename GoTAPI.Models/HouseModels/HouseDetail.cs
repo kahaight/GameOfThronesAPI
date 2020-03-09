@@ -1,4 +1,5 @@
 ﻿using GoTAPI.Data.DataClasses;
+using GoTAPI.Models.CharacterModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,6 @@ namespace GoTAPI.Models.HouseModels
         public string Sigil { get; set; }
         public string Words { get; set; }
         public string Region { get; set; }
-        public ICollection<Character> Characters { get; set; }
+        public IEnumerable<CharacterListItem> Characters { get; set; }
     }
 }

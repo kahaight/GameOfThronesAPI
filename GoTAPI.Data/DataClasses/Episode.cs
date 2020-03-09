@@ -11,5 +11,10 @@ namespace GoTAPI.Data.DataClasses
     {
         [Key]
         public int Id { get; set; }
+        public int Season { get; set; }
+        public int EpisodeNumber { get; set; }
+        public string Title { get; set; }
+        public int RunTime { get; set; }
+        public ICollection<CharacterEpisode> CharacterEpisodes { get; set; }
     }
 }

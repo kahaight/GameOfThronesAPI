@@ -1,4 +1,5 @@
-﻿using GoTAPI.Models.CharacterModels;
+﻿using GoTAPI.Data.DataClasses;
+using GoTAPI.Models.CharacterModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace GoTAPI.Services
     public class CharacterService
     {
         private readonly Guid _userId;
+
+        public CharacterService() { }
         public CharacterService(Guid userId)
         {
             _userId = userId;
@@ -19,10 +22,11 @@ namespace GoTAPI.Services
 
         //}
 
-        //public IEnumerable<CharacterListItem> ReadCharacters()
+        //public IEnumberable<CharacterListItem> ReadCharacters()
         //{
 
         //}
+
         //public CharacterDetail ReadCharacterById()
         //{
 
@@ -35,5 +39,16 @@ namespace GoTAPI.Services
         //{
 
         //}
+        public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
+        {
+                var query = characters.Select(
+                            e =>
+                                new CharacterListItem
+                                {
+                                    Name = e.Name
+                                }
+                        );
+                return query.ToArray();
+        }
     }
 }
