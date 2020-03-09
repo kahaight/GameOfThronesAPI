@@ -1,4 +1,8 @@
 ﻿using GoTAPI.Data.DataClasses;
+<<<<<<< HEAD
+using GoTAPI.Models;
+=======
+>>>>>>> 29ec58678564f71f831f279818003d419b557dcf
 using GoTAPI.Models.CharacterModels;
 using System;
 using System.Collections.Generic;
@@ -17,16 +21,48 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-        //public bool CreateCharacter(CharacterCreate model)
-        //{
+        public bool CreateCharacter(CharacterCreate model)
+        {
+            var entity =
+                new Character()
+                {
+                    Name = model.Name,
+                    Alive = model.Alive,
+                    EpisodeOfDeath = model.EpisodeOfDeath,
+                    House = model.House,
+                    Gender = model.Gender,
+                    Actor = model.Actor,
+                    CauseOfDeath = model.CauseofDeath
+                };
+            using (var ctx=new ApplicationDbContext())
+            {
+                ctx.Characters.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
 
-        //}
+        }
 
+<<<<<<< HEAD
+        public IEnumerable<CharacterListItem> ReadCharacters()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Characters.Where(e=>e.OwnerId==_userId).Select(
+                    e=>
+                        new CharacterListItem
+                        {
+                            CharacterId=e.CharacterId,
+
+                        })
+            }
+        }
+=======
         //public IEnumberable<CharacterListItem> ReadCharacters()
         //{
 
         //}
 
+>>>>>>> 29ec58678564f71f831f279818003d419b557dcf
         //public CharacterDetail ReadCharacterById()
         //{
 
