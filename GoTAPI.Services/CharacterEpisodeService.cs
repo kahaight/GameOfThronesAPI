@@ -18,22 +18,6 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-        public CharacterEpisodeService()
-        { 
-        
-        }
-
-        public IEnumerable<EpisodeListItem> ConvertCharEpisToEpis(ICollection<CharacterEpisode> characterEpisodes)
-        {
-            var query = characterEpisodes.Select(
-                        e =>
-                            new EpisodeListItem
-                            {
-                                Title = e.Episode.Title
-                            }
-                            );
-            return query.ToArray();
-        }
         /*public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
         {
 
