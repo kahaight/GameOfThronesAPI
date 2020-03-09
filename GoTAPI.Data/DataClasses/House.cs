@@ -14,6 +14,7 @@ namespace GoTAPI.Data.DataClasses
         public string Words { get; set; }
         public string Region { get; set; }
         public virtual ICollection<Character> Characters { get; set; }
+        //to  characterListItem convert from the 
 
         public House() { }
         public House(string name, string sigil, string words, string region, string causeOfDeath)

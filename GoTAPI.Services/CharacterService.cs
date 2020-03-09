@@ -1,4 +1,6 @@
-﻿using GoTAPI.Models.CharacterModels;
+﻿using GoTAPI.Data.DataClasses;
+using GoTAPI.Models;
+using GoTAPI.Models.CharacterModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,15 +16,40 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-        //public bool CreateCharacter(CharacterCreate model)
-        //{
+        public bool CreateCharacter(CharacterCreate model)
+        {
+            var entity =
+                new Character()
+                {
+                    Name = model.Name,
+                    Alive = model.Alive,
+                    EpisodeOfDeath = model.EpisodeOfDeath,
+                    House = model.House,
+                    Gender = model.Gender,
+                    Actor = model.Actor,
+                    CauseOfDeath = model.CauseofDeath
+                };
+            using (var ctx=new ApplicationDbContext())
+            {
+                ctx.Characters.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
 
-        //}
+        }
 
-        //public IEnumerable<CharacterListItem> ReadCharacters()
-        //{
+        public IEnumerable<CharacterListItem> ReadCharacters()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Characters.Where(e=>e.OwnerId==_userId).Select(
+                    e=>
+                        new CharacterListItem
+                        {
+                            CharacterId=e.CharacterId,
 
-        //}
+                        })
+            }
+        }
         //public CharacterDetail ReadCharacterById()
         //{
 
