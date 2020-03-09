@@ -126,6 +126,12 @@
                 new Episode { Season = 8, EpisodeNumber = 4, Title = "The Last of the Starks", RunTime = 78 },
                 new Episode { Season = 8, EpisodeNumber = 5, Title = "The Bells", RunTime = 78 },
                 new Episode { Season = 8, EpisodeNumber = 6, Title = "The Iron Throne", RunTime = 79 });
+            context.SaveChanges();
+            context.CharacterEpisodes.AddOrUpdate(
+                c => c.Id,
+                new CharacterEpisode { Id = 1, CharacterId = 1, EpisodeId = 1 },
+                new CharacterEpisode { Id = 2, CharacterId = 1, EpisodeId = 2 });
+            context.SaveChanges();
         }
     }
 }

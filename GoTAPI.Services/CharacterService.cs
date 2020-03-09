@@ -1,8 +1,5 @@
 ﻿using GoTAPI.Data.DataClasses;
-<<<<<<< HEAD
 using GoTAPI.Models;
-=======
->>>>>>> 29ec58678564f71f831f279818003d419b557dcf
 using GoTAPI.Models.CharacterModels;
 using System;
 using System.Collections.Generic;
@@ -29,10 +26,10 @@ namespace GoTAPI.Services
                     Name = model.Name,
                     Alive = model.Alive,
                     EpisodeOfDeath = model.EpisodeOfDeath,
-                    House = model.House,
                     Gender = model.Gender,
                     Actor = model.Actor,
-                    CauseOfDeath = model.CauseofDeath
+                    CauseOfDeath = model.CauseOfDeath,
+                    HouseId = model.HouseId
                 };
             using (var ctx=new ApplicationDbContext())
             {
@@ -42,39 +39,57 @@ namespace GoTAPI.Services
 
         }
 
-<<<<<<< HEAD
         public IEnumerable<CharacterListItem> ReadCharacters()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.Characters.Where(e=>e.OwnerId==_userId).Select(
-                    e=>
+                var query = ctx.Characters.Select(
+                    e =>
                         new CharacterListItem
                         {
-                            CharacterId=e.CharacterId,
-
-                        })
+                            Name = e.Name,
+                        });
+                return query.ToArray();
             }
         }
-=======
-        //public IEnumberable<CharacterListItem> ReadCharacters()
-        //{
+        public CharacterDetail ReadCharacterById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var characterEpisodeService = new CharacterEpisodeService();
+                var entity = ctx.Characters.Single(e => e.Id == id);
+                return new CharacterDetail
+                {
+                    Id = entity.Id,
+                    Name = entity.Name,
+                    Alive = entity.Alive,
+                    EpisodeOfDeath = entity.EpisodeOfDeath,
+                    House = entity.House.Name,
+                    Gender = entity.Gender,
+                    Actor = entity.Actor,
+                    CauseOfDeath = entity.CauseOfDeath,
+                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
+                };
 
-        //}
 
->>>>>>> 29ec58678564f71f831f279818003d419b557dcf
-        //public CharacterDetail ReadCharacterById()
-        //{
-
-        //}
+            }
+        }
         //public bool UpdateCharacter(CharacterUpdate model)
         //{
 
         //}
-        //public bool DeleteCharacter(int houseId)
-        //{
-
-        //}
+        public bool DeleteCharacter(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Characters
+                        .Single(e => e.Id == id);
+                ctx.Characters.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
         {
                 var query = characters.Select(

@@ -86,14 +86,14 @@ namespace GoTAPI.Services
             }
         }
 
-        public bool DeleteHouse(int houseId)
+        public bool DeleteHouse(int id)
         {
             using (var ctx =new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Houses
-                        .Single(e => e.Id == houseId);
+                        .Single(e => e.Id == id);
                 ctx.Houses.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }

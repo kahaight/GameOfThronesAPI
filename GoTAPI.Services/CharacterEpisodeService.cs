@@ -1,4 +1,6 @@
-﻿using GoTAPI.Models.CharacterEpisodeModels;
+﻿using GoTAPI.Data.DataClasses;
+using GoTAPI.Models.CharacterEpisodeModels;
+using GoTAPI.Models.EpisodeModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace GoTAPI.Services
     public class CharacterEpisodeService
     {
         private readonly Guid _userId;
+        public CharacterEpisodeService() { }
         public CharacterEpisodeService(Guid userId)
         {
             _userId = userId;
@@ -18,5 +21,24 @@ namespace GoTAPI.Services
         {
 
         }*/
+        public IEnumerable<string> ConvertCharEpisToEpis(ICollection<CharacterEpisode> characterEpisodes)
+        {
+            var query = characterEpisodes.Select(
+                        e =>
+                            new EpisodeListItem 
+                            {
+                                Title = e.Episode.Title
+                            }
+                    );
+            query.ToArray();
+            List<string> episodeStrings = new List<string>();
+
+            foreach(EpisodeListItem episodeListItem in query)
+            {
+                episodeStrings.Add(episodeListItem.Title);
+            }
+            return episodeStrings;
+
+        }
     }
 }
