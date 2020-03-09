@@ -36,6 +36,7 @@ namespace GoTAPI.Controllers
             var characters = characterService.ReadCharacters();
             return Ok(characters);
         }
+
         [HttpGet]
         public IHttpActionResult Get(int id)
         {
@@ -43,11 +44,15 @@ namespace GoTAPI.Controllers
             var character = characterService.ReadCharacterById(id);
             return Ok(character);
         }
-        //[HttpPut]
-        //public IHttpActionResult Put([FromUri]int characterId, [FromBody] CharacterUpdate model)
-        //{
-
-        //}
+        [HttpPut]
+        public IHttpActionResult Put(CharacterUpdate model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateCharacterService();
+            if (!service.UpdateCharacter(model))
+                return InternalServerError();
+        }
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
@@ -55,7 +60,6 @@ namespace GoTAPI.Controllers
 
             if (!service.DeleteCharacter(id))
                 return InternalServerError();
-
             return Ok();
         }
     }

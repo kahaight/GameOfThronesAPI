@@ -1,6 +1,7 @@
 ﻿using GoTAPI.Data.DataClasses;
 using GoTAPI.Models;
 using GoTAPI.Models.CharacterModels;
+using GoTAPI.Models.HouseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,17 +52,17 @@ namespace GoTAPI.Services
                         });
                 return query.ToArray();
             }
-        }
+        } 
         public CharacterDetail ReadCharacterById(int id)
         {
-            using (var ctx = new ApplicationDbContext())
+            using (var ctx =new ApplicationDbContext())
             {
                 var characterEpisodeService = new CharacterEpisodeService();
                 var entity = ctx.Characters.Single(e => e.Id == id);
                 return new CharacterDetail
                 {
                     Id = entity.Id,
-                    Name = entity.Name,
+                    Name=entity.Name,
                     Alive = entity.Alive,
                     EpisodeOfDeath = entity.EpisodeOfDeath,
                     House = entity.House.Name,
@@ -70,14 +71,27 @@ namespace GoTAPI.Services
                     CauseOfDeath = entity.CauseOfDeath,
                     Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
                 };
-
-
             }
         }
-        //public bool UpdateCharacter(CharacterUpdate model)
-        //{
-
-        //}
+      
+        public bool UpdateCharacter(CharacterUpdate model)
+        {
+          using (var ctx = new ApplicationDbContext())
+          {
+            var entity = 
+                        ctx
+                       .Characters
+                       .Single(e => e.Id == model.Id);
+                entity.Name = model.Name;
+                entity.Alive = model.Alive;
+                entity.EpisodeOfDeath = model.EpisodeOfDeath;
+                entity.HouseId = model.HouseId;
+                entity.Gender = model.Gender;
+                entity.Actor = model.Actor;
+                entity.CauseOfDeath = model.CauseOfDeath;
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public bool DeleteCharacter(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -92,14 +106,14 @@ namespace GoTAPI.Services
         }
         public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
         {
-                var query = characters.Select(
-                            e =>
-                                new CharacterListItem
-                                {
-                                    Name = e.Name
-                                }
-                        );
-                return query.ToArray();
+            var query = characters.Select(
+                        e =>
+                            new CharacterListItem
+                            {
+                                Name = e.Name
+                            }
+                    );
+            return query.ToArray();
         }
     }
 }
