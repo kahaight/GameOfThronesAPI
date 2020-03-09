@@ -78,10 +78,18 @@ namespace GoTAPI.Services
         //{
 
         //}
-        //public bool DeleteCharacter(int houseId)
-        //{
-
-        //}
+        public bool DeleteCharacter(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Characters
+                        .Single(e => e.Id == id);
+                ctx.Characters.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public IEnumerable<CharacterListItem> ConvertCharsToListItems(ICollection<Character> characters)
         {
                 var query = characters.Select(
