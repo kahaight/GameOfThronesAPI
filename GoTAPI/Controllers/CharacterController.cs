@@ -52,6 +52,7 @@ namespace GoTAPI.Controllers
             var service = CreateCharacterService();
             if (!service.UpdateCharacter(model))
                 return InternalServerError();
+            return Ok();
         }
         [HttpDelete]
         public IHttpActionResult Delete(int id)

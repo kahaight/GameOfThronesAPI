@@ -13,30 +13,55 @@ namespace GoTAPI.Controllers
 {
     public class EpisodeController : ApiController
     {
-        private EpisodeService CreateHouseService()
+        private EpisodeService CreateEpisodeService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var episodeService = new EpisodeService(userId);
             return episodeService;
         }
-        //[HttpPost]
-        //public IHttpActionResult Post(EpisodeCreate episode)
-        //{
+        [HttpPost]
+        public IHttpActionResult Post(EpisodeCreate episode)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateEpisodeService();
+            if (!service.CreateEpisode(episode))
+                return InternalServerError();
+            return Ok();
+        }
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            EpisodeService episodeService = CreateEpisodeService();
+            var episodes = episodeService.ReadEpisodes();
+            return Ok(episodes);
+        }
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            EpisodeService episodeService = CreateEpisodeService();
+            var episode = episodeService.ReadEpisodeById(id);
+            return Ok(episode);
 
-        //}
-        //[HttpGet]
-        //public IHttpActionResult Get()
-        //{
-        //}
-        //[HttpGet]
-        //public IHttpActionResult Get(int episodeId)
-        //{
+        }
+        [HttpPut]
+        public IHttpActionResult Put(EpisodeUpdate model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateEpisodeService();
+            if (!service.UpdateEpisode(model))
+                return InternalServerError();
+            return Ok();
+        }
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateEpisodeService();
 
-        //}
-        //[HttpPut]
-        //public IHttpActionResult Put([FromUri]int episodeId, [FromBody] EpisodeUpdate model)
-        //{
-
-        //}
+            if (!service.DeleteEpisode(id))
+                return InternalServerError();
+            return Ok();
+        }
     }
 }
