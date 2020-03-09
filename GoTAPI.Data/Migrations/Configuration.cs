@@ -39,15 +39,14 @@
             context.Characters.AddOrUpdate(
                 c => c.Name,
                 new Character { HouseId = 2, Name = "Tyrion Lannister", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "Peter Dinklage", CauseOfDeath = "N/A" },
-                new Character { HouseId = 2, Name = "Cersei Lannister", Alive = false, EpisodeOfDeath = 72, Gender = "Female", Actor = "Lena Headey", CauseOfDeath = "N/A" },
-                new Character { HouseId = 3, Name = "Daenerys Targaryen", Alive = false, EpisodeOfDeath = 73, Gender = "Female", Actor = "Emilia Clarke", CauseOfDeath = "N/A" },
+                new Character { HouseId = 2, Name = "Cersei Lannister", Alive = false, EpisodeOfDeath = 72, Gender = "Female", Actor = "Lena Headey", CauseOfDeath = "Crushed by rubble" },
+                new Character { HouseId = 3, Name = "Daenerys Targaryen", Alive = false, EpisodeOfDeath = 73, Gender = "Female", Actor = "Emilia Clarke", CauseOfDeath = "Stabbed by Jon Snow" },
                 new Character { HouseId = 1, Name = "Jon Snow", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "Kit Harington", CauseOfDeath = "N/A" },
                 new Character { HouseId = 1, Name = "Sansa Stark", Alive = true, EpisodeOfDeath = null, Gender = "Female", Actor = "Sophie Turner", CauseOfDeath = "N/A" },
                 new Character { HouseId = 1, Name = "Arya Stark", Alive = true, EpisodeOfDeath = null, Gender = "Female", Actor = "Maisie Williams", CauseOfDeath = "N/A" },
-                new Character { HouseId = 2, Name = "Jaime Lannister", Alive = false, EpisodeOfDeath = 72, Gender = "Male", Actor = "Nikolaj Coster-Waldau", CauseOfDeath = "N/A" },
-
-                //new Character { HouseId = 18, Name = "Jorah Mormont", Alive = false, EpisodeOfDeath = 70, Gender = "Male", Actor = "Peter Dinklage", CauseOfDeath = "N/A" },
-                //new Character { HouseId = 19, Name = "Samwell Tarly", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "Peter Dinklage", CauseOfDeath = "N/A" },
+                new Character { HouseId = 2, Name = "Jaime Lannister", Alive = false, EpisodeOfDeath = 72, Gender = "Male", Actor = "Nikolaj Coster-Waldau", CauseOfDeath = "Crushed by rubble" },
+                //new Character { HouseId = 18, Name = "Jorah Mormont", Alive = false, EpisodeOfDeath = 70, Gender = "Male", Actor = "Iain Glen", CauseOfDeath = "Killed by Wights protecting Daenerys" },
+                //new Character { HouseId = 19, Name = "Samwell Tarly", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "John Bradley", CauseOfDeath = "N/A" },
                 new Character { HouseId = 11, Name = "Theon Greyjoy", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "Alfie Allen", CauseOfDeath = "N/A" });
             context.SaveChanges();
 
