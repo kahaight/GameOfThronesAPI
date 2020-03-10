@@ -87,7 +87,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClasses\Affiliation.cs" />
     <Compile Include="DataClasses\Character.cs" />
+    <Compile Include="DataClasses\CharacterAffiliation.cs" />
     <Compile Include="DataClasses\CharacterEpisode.cs" />
     <Compile Include="DataClasses\Episode.cs" />
     <Compile Include="DataClasses\House.cs" />
@@ -112,6 +114,10 @@
     <Compile Include="Migrations\202003070021489_AddedCharacterEpisodeAndEpisodeClass.designer.cs">
       <DependentUpon>202003070021489_AddedCharacterEpisodeAndEpisodeClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003101844448_add-migration Affiliation.cs" />
+    <Compile Include="Migrations\202003101844448_add-migration Affiliation.designer.cs">
+      <DependentUpon>202003101844448_add-migration Affiliation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003070021489_AddedCharacterEpisodeAndEpisodeClass.resx">
       <DependentUpon>202003070021489_AddedCharacterEpisodeAndEpisodeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003101844448_add-migration Affiliation.resx">
+      <DependentUpon>202003101844448_add-migration Affiliation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

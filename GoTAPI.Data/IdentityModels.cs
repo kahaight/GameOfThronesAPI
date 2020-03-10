@@ -38,6 +38,8 @@ namespace GoTAPI.Models
         public DbSet<Character> Characters { get; set; }
         public DbSet<Episode> Episodes { get; set; }
         public DbSet<CharacterEpisode> CharacterEpisodes { get; set; }
+        public DbSet<Affiliation> Affiliations { get; set; }
+        public DbSet<CharacterAffiliation> CharacterAffiliations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
