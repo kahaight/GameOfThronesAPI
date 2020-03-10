@@ -15,6 +15,6 @@ namespace GoTAPI.Data.DataClasses
         public int EpisodeNumber { get; set; }
         public string Title { get; set; }
         public int RunTime { get; set; }
-        public ICollection<CharacterEpisode> CharacterEpisodes { get; set; }
+        public virtual ICollection<CharacterEpisode> CharacterEpisodes { get; set; }
     }
 }
