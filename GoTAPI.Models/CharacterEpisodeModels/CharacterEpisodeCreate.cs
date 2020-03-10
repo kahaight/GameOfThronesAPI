@@ -8,5 +8,7 @@ namespace GoTAPI.Models.CharacterEpisodeModels
 {
     public class CharacterEpisodeCreate
     {
+        public int EpisodeId { get; set; }
+        public int CharacterId { get; set; }
     }
 }
