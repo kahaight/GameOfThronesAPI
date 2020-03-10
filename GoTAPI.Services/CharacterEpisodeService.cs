@@ -19,7 +19,8 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-        public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
+      
+public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
         {
             var entity =
                 new CharacterEpisode()
@@ -51,6 +52,26 @@ namespace GoTAPI.Services
                 episodeStrings.Add(episodeListItem.Title);
             }
             return episodeStrings;
+
+        }
+
+        public IEnumerable<string> ConvertCharEpisToChar(ICollection<CharacterEpisode> episodeCharacter)
+        {
+            var query = episodeCharacter.Select(
+                        e =>
+                            new CharacterListItem 
+                            {
+                                Name = e.Character.Name
+                            }
+                    );
+            query.ToArray();
+            List<string> characterStrings = new List<string>();
+
+            foreach(CharacterListItem characterListItem in query)
+            {
+                characterStrings.Add(characterListItem.Name);
+            }
+            return characterStrings;
 
         }
     }
