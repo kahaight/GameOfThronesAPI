@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AffiliationService.cs" />
+    <Compile Include="CharacterAffiliationService.cs" />
     <Compile Include="CharacterEpisodeService.cs" />
     <Compile Include="CharacterService.cs" />
     <Compile Include="EpisodeService.cs" />

@@ -20,6 +20,7 @@ namespace GoTAPI.Data.DataClasses
         public string Actor { get; set; }
         public string CauseOfDeath { get; set; }
         public virtual ICollection<CharacterEpisode> CharacterEpisodes { get; set; }
+        public virtual ICollection<CharacterAffiliation> CharacterAffiliations { get; set; }
 
         public Character() { }
         public Character(int houseId, string name, bool alive, int? episodeOfDeath, string gender, string actor, string causeOfDeath)

@@ -18,7 +18,7 @@ namespace GoTAPI.Services
         }
 
 
-      /*  public int Season { get; set; }
+        /*public int Season { get; set; }
         public int EpisodeNumber { get; set; }
         public string Title { get; set; }
         public int RunTime { get; set; }*/
@@ -26,7 +26,6 @@ namespace GoTAPI.Services
         {
             var entity =
                 new Episode()
-
                 {
                     Season = model.Season,
                     EpisodeNumber = model.EpisodeNumber,
