@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoTAPI.Models.AffiliationModels
+namespace GoTAPI.Models.CharacterAffiliationModels
 {
-    public class AffiliationListItem
+    public class CharacterAffiliationCreate
     {
         public string Description { get; set; }
     }
