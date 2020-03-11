@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoTAPI.Models.CharacterAffiliationModels
 {
-    public class CharacterAffiliationUpdate
+    public class CharacterAffiliationCreate
     {
         public string Description { get; set; }
     }
