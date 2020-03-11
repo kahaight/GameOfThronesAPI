@@ -38,7 +38,7 @@ namespace GoTAPI.Services
 
         public IEnumerable<AffiliationListItem> ReadAffiliations()
         {
-            using (var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext()) 
             {
                 var query = ctx.Affiliations.Select(
                     e =>
