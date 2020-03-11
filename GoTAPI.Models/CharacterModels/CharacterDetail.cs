@@ -19,5 +19,6 @@ namespace GoTAPI.Models.CharacterModels
         public string Actor { get; set; }
         public string CauseOfDeath { get; set; }
         public virtual IEnumerable<string> Episodes { get; set; }
+        public virtual IEnumerable<string> Affiliation { get; set; }
     }
 }

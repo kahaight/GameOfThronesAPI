@@ -88,15 +88,15 @@ namespace GoTAPI.Services
         }
         public bool DeleteEpisode(int id)
         {
-            using (var ctx =new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Episodes
                         .Single(e => e.Id == id);
-        ctx.Episodes.Remove(entity);
+                ctx.Episodes.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
-}
+        }
     }
 }

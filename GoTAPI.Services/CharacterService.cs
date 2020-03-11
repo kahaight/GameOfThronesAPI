@@ -58,6 +58,7 @@ namespace GoTAPI.Services
             using (var ctx =new ApplicationDbContext())
             {
                 var characterEpisodeService = new CharacterEpisodeService();
+                var characteraffiliationService = new CharacterAffiliationService();
                 var entity = ctx.Characters.Single(e => e.Id == id);
                 return new CharacterDetail
                 {
@@ -69,7 +70,8 @@ namespace GoTAPI.Services
                     Gender = entity.Gender,
                     Actor = entity.Actor,
                     CauseOfDeath = entity.CauseOfDeath,
-                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
+                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes),
+                    Affiliation= characteraffiliationService.ConvertCharAfilToAfil(entity.CharacterAffiliations)
                 };
             }
         }
