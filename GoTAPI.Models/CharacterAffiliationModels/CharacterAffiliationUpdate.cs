@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoTAPI.Models.AffiliationModels
+namespace GoTAPI.Models.CharacterAffiliationModels
 {
-    public class AffiliationUpdate
+    class CharacterAffiliationUpdate
     {
-        public int Id { get; set; }
-        public string Group { get; set; }
         public string Description { get; set; }
-    
     }
 }
