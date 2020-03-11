@@ -8,6 +8,6 @@ namespace GoTAPI.Models.AffiliationModels
 {
     public class AffiliationListItem
     {
-        public string Description { get; set; }
+        public string Group { get; set; }
     }
 }
