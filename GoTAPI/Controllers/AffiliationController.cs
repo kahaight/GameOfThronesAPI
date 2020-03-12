@@ -19,6 +19,7 @@ namespace GoTAPI.Controllers
             return affiliationService;
         }
         [HttpPost]
+        [Route("api/Affiliation")]
         public IHttpActionResult Post(AffiliationCreate affiliation)
         {
             if (!ModelState.IsValid)
@@ -29,6 +30,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpGet]
+        [Route("api/Affiliation")]
         public IHttpActionResult Get()
         {
             AffiliationService affiliationService = CreateAffiliationService();
@@ -36,6 +38,7 @@ namespace GoTAPI.Controllers
             return Ok(affiliations);
         }
         [HttpGet]
+        [Route ("api/Affiliation/{id}")]
         public IHttpActionResult Get(int id)
         {
             AffiliationService affiliationService = CreateAffiliationService();
@@ -44,6 +47,7 @@ namespace GoTAPI.Controllers
 
         }
         [HttpPut]
+        [Route("api/Affiliation")]
         public IHttpActionResult Put(AffiliationUpdate model)
         {
             if (!ModelState.IsValid)
@@ -54,6 +58,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpDelete]
+        [Route("api/Affiliation/{id}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateAffiliationService();
