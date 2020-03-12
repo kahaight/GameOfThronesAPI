@@ -25,6 +25,11 @@ namespace GoTAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            /*config.Routes.MapHttpRoute(
+                name: "ApiByAlive",
+                routeTemplate: "api/{controller}/Alive/{alive}",
+                defaults: new { alive = RouteParameter.Optional }
+            );*/
         }
     }
 }
