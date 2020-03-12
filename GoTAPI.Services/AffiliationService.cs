@@ -9,11 +9,6 @@ using System.Threading.Tasks;
 
 namespace GoTAPI.Services
 {
-    /*    public int Id { get; set; }
-        public string Group { get; set; }
-        public string Description { get; set; }
-        public virtual ICollection<CharacterAffiliation> CharacterAffiliations { get; set; }
-        public class AffiliationService*/
     public class AffiliationService
     {
         private readonly Guid _userId;
@@ -38,7 +33,7 @@ namespace GoTAPI.Services
 
         public IEnumerable<AffiliationListItem> ReadAffiliations()
         {
-            using (var ctx = new ApplicationDbContext()) 
+            using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx.Affiliations.Select(
                     e =>
@@ -50,7 +45,6 @@ namespace GoTAPI.Services
                 return query.ToArray();
             }
         }
-
         public AffiliationDetail ReadAffiliationById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -58,7 +52,11 @@ namespace GoTAPI.Services
                 var characterAffiliationService = new CharacterAffiliationService();
                 var entity = ctx.Affiliations.Single(e => e.Id == id);
                 return new AffiliationDetail
-                { Description = entity.Description };
+                { Group = entity.Group,
+                  Description=entity.Description,
+                  Characters = characterAffiliationService.ConvertCharAfilToAfil(entity.CharacterAffiliations)
+                };
+
             }
         }
         public bool UpdateAffiliation(AffiliationUpdate model)

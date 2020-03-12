@@ -430,8 +430,9 @@ new Character { Id = 342, HouseId = 9, Name = "Hoster Tully", Alive = false, Epi
 new Character { Id = 343, HouseId = 62, Name = "Donnel Hill", Alive = false, EpisodeOfDeath = 39, Gender = "Male", Actor = "Jack Roth", CauseOfDeath = "Killed by Mag Mar Tun Doh Weg" },
 new Character { Id = 344, HouseId = 62, Name = "Quinn", Alive = false, EpisodeOfDeath = null, Gender = "Male", Actor = "Oryan Landa", CauseOfDeath = "Died of injuries from the battle of the Wispering Wood" },
 new Character { Id = 345, HouseId = 21, Name = "Howland Reed", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "Leo Woodruff", CauseOfDeath = "N/A" },
-new Character { Id = 346, HouseId = 62, Name = "Alanna", Alive = true, EpisodeOfDeath = null, Gender = "Female", Actor = "Kim Chapman", CauseOfDeath = "N/A" }
-                );
+new Character { Id = 346, HouseId = 62, Name = "Alanna", Alive = true, EpisodeOfDeath = null, Gender = "Female", Actor = "Kim Chapman", CauseOfDeath = "N/A" });
+            context.SaveChanges();
+
 
             context.Episodes.AddOrUpdate(
                 c => c.Title,
@@ -3281,6 +3282,49 @@ new Character { Id = 346, HouseId = 62, Name = "Alanna", Alive = true, EpisodeOf
                 new CharacterEpisode { Id = 2768, EpisodeId = 39, CharacterId = 343 },
                 new CharacterEpisode { Id = 2769, EpisodeId = 72, CharacterId = 346 });
             context.SaveChanges();
+            context.Affiliations.AddOrUpdate(
+                c => c.Id,
+                new Affiliation { Id = 1, Group = "Brotherhood without Banners", Description = "" },
+                new Affiliation { Id = 2, Group = "Night's Watch", Description = "" },
+                new Affiliation { Id = 3, Group = "Order of Maesters", Description = "" },
+                new Affiliation { Id = 4, Group = "King's Guard", Description = "" },
+                new Affiliation { Id = 5, Group = "Sparrows(Faith Militant)", Description = "" },
+                new Affiliation { Id = 6, Group = "Rainbow Guard", Description = "" },
+                new Affiliation { Id = 7, Group = "City Watch of King's Landing", Description = "" },
+                new Affiliation { Id = 8, Group = "Faceless Men", Description = "" },
+                new Affiliation { Id = 9, Group = "Faith of the Seven", Description = "" },
+                new Affiliation { Id = 10, Group = "The Thirteen", Description = "" },
+                new Affiliation { Id = 11, Group = "Undying Ones", Description = "" },
+                new Affiliation { Id = 12, Group = "Good Masters", Description = "" },
+                new Affiliation { Id = 13, Group = "Wise Masters", Description = "" },
+                new Affiliation { Id = 14, Group = "Great Masters", Description = "" },
+                new Affiliation { Id = 15, Group = "Dosh Khaleen", Description = "" },
+                new Affiliation { Id = 16, Group = "Ruling council of Mereen", Description = "" },
+                new Affiliation { Id = 17, Group = "Small Council (King's Landing)", Description = "" },
+                new Affiliation { Id = 18, Group = "Dothraki Khals", Description = "" },
+                new Affiliation { Id = 19, Group = "Priest/Priestess of R'hllor", Description = "" },
+                new Affiliation { Id = 20, Group = "Second Sons", Description = "" },
+                new Affiliation { Id = 21, Group = "Golden Company", Description = "" },
+                new Affiliation { Id = 22, Group = "Sons of the Harpy", Description = "" },
+                new Affiliation { Id = 23, Group = "Iron Bank", Description = "" },
+                new Affiliation { Id = 24, Group = "The Brave Companions", Description = "" },
+                new Affiliation { Id = 25, Group = "Unsullied", Description = "" },
+                new Affiliation { Id = 26, Group = "Free Folk", Description = "" },
+                new Affiliation { Id = 27, Group = "Dothraki", Description = "" },
+                new Affiliation { Id = 28, Group = "Westerosi", Description = "" },
+                new Affiliation { Id = 29, Group = "Essosi", Description = "" },
+                new Affiliation { Id = 30, Group = "The Alchemists' Guild", Description = "" },
+                new Affiliation { Id = 31, Group = "Izembaro's Acting Troupe", Description = "" },
+                new Affiliation { Id = 32, Group = "Queen's Guard", Description = "" },
+                new Affiliation { Id = 33, Group = "Ray's Congregation", Description = "" },
+                new Affiliation { Id = 34, Group = "Night's Watch Mutineer", Description = "" },
+                new Affiliation { Id = 35, Group = "Knight of the Seven Kingdoms", Description = "" });
+            context.SaveChanges();
+
+
+
+
+
 
 
         }

@@ -40,7 +40,9 @@ namespace GoTAPI.Services
                         e =>
                             new EpisodeListItem
                             {
-                                Title = e.Episode.Title
+                                Title = e.Episode.Title,
+                                Season=e.Episode.Season,
+                                Episode=e.Episode.EpisodeNumber
                             }
                     );
             query.ToArray();
@@ -48,7 +50,8 @@ namespace GoTAPI.Services
 
             foreach (EpisodeListItem episodeListItem in query)
             {
-                episodeStrings.Add(episodeListItem.Title);
+                episodeStrings.Add($"{episodeListItem.Title}, (Season: {episodeListItem.Season}, Episode: {episodeListItem.Episode})");
+                /*episodeStrings.AddRange(episodeListItem.Title, episodeListItem.Season.ToString,episodeListItem.Episode.ToString);*/
             }
             return episodeStrings;
 
