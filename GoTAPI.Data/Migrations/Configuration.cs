@@ -431,8 +431,8 @@ new Character { Id = 343, HouseId = 62, Name = "Donnel Hill", Alive = false, Epi
 new Character { Id = 344, HouseId = 62, Name = "Quinn", Alive = false, EpisodeOfDeath = null, Gender = "Male", Actor = "Oryan Landa", CauseOfDeath = "Died of injuries from the battle of the Wispering Wood" },
 new Character { Id = 345, HouseId = 21, Name = "Howland Reed", Alive = true, EpisodeOfDeath = null, Gender = "Male", Actor = "Leo Woodruff", CauseOfDeath = "N/A" },
 new Character { Id = 346, HouseId = 62, Name = "Alanna", Alive = true, EpisodeOfDeath = null, Gender = "Female", Actor = "Kim Chapman", CauseOfDeath = "N/A" });
-
             context.SaveChanges();
+
 
             context.Episodes.AddOrUpdate(
                 c => c.Title,
