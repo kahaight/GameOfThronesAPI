@@ -19,6 +19,7 @@ namespace GoTAPI.Controllers
             return characterAffiliationService;
         }
         [HttpPost]
+        [Route("api/CharacterAffiliation")]
         public IHttpActionResult Post(CharacterAffiliationCreate characterAffiliation)
         {
             if (!ModelState.IsValid)

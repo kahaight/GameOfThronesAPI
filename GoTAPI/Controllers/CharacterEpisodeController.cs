@@ -19,6 +19,7 @@ namespace GoTAPI.Controllers
             return characterEpisodeService;
         }
         [HttpPost]
+        [Route("api/CharacterEpisode")]
         public IHttpActionResult Post(CharacterEpisodeCreate characterEpisode)
         {
             if (!ModelState.IsValid)

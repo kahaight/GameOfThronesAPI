@@ -19,6 +19,7 @@ namespace GoTAPI.Controllers
             return houseService;
         }
         [HttpPost]
+        [Route("api/House")]
         public IHttpActionResult Post(HouseCreate episode)
         {
             if (!ModelState.IsValid)
@@ -29,6 +30,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpGet]
+        [Route("api/House")]
         public IHttpActionResult Get()
         {
             HouseService houseService = CreateHouseService();
@@ -36,6 +38,7 @@ namespace GoTAPI.Controllers
             return Ok(houses);
         }
         [HttpGet]
+        [Route("api/House/{id}")]
         public IHttpActionResult Get(int id)
         {
             HouseService houseService = CreateHouseService();
@@ -43,6 +46,7 @@ namespace GoTAPI.Controllers
             return Ok(house);
         }
         [HttpPut]
+        [Route("api/House")]
         public IHttpActionResult Put(HouseUpdate model)
         {
             if (!ModelState.IsValid)
@@ -53,6 +57,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpDelete]
+        [Route("api/House/{id}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateHouseService();

@@ -20,6 +20,7 @@ namespace GoTAPI.Controllers
             return characterService;
         }
         [HttpPost]
+        [Route("api/Character")]
         public IHttpActionResult Post(CharacterCreate character)
         {
             if (!ModelState.IsValid)
@@ -30,6 +31,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpGet]
+        [Route("api/Character")]
         public IHttpActionResult Get()
         {
             CharacterService characterService = CreateCharacterService();
@@ -38,6 +40,7 @@ namespace GoTAPI.Controllers
         }
         //add GET (bool isAlive)
         [HttpGet]
+        [Route("api/Character/{id}")]
         public IHttpActionResult Get(int id)
         {
             CharacterService characterService = CreateCharacterService();
@@ -45,7 +48,7 @@ namespace GoTAPI.Controllers
             return Ok(character);
         }
         [HttpGet]
-        /*[Route]*/
+        [Route("api/Character/Alive/{alive}")]
         public IHttpActionResult Get(bool alive)
         {
             CharacterService characterService = CreateCharacterService();
@@ -53,6 +56,7 @@ namespace GoTAPI.Controllers
             return Ok(characters);
         }
         [HttpPut]
+        [Route("api/Character")]
         public IHttpActionResult Put(CharacterUpdate model)
         {
             if (!ModelState.IsValid)
@@ -63,6 +67,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpDelete]
+        [Route("api/Character/{id}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateCharacterService();
