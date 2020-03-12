@@ -73,7 +73,21 @@ namespace GoTAPI.Services
                 };
             }
         }
-      
+        public IEnumerable<CharacterListItem> ReadCharactersByStatus(bool alive)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Characters.Where(e => e.Alive == alive)
+                    .Select(
+                    e =>
+                        new CharacterListItem
+                        {
+                            Name = e.Name,
+                        });
+                return query.ToArray();
+            }
+        }
+
         public bool UpdateCharacter(CharacterUpdate model)
         {
           using (var ctx = new ApplicationDbContext())

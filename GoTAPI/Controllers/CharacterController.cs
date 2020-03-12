@@ -44,6 +44,13 @@ namespace GoTAPI.Controllers
             var character = characterService.ReadCharacterById(id);
             return Ok(character);
         }
+        [HttpGet]
+        public IHttpActionResult Get(bool alive)
+        {
+            CharacterService characterService = CreateCharacterService();
+            var characters = characterService.ReadCharactersByStatus(alive);
+            return Ok(characters);
+        }
         [HttpPut]
         public IHttpActionResult Put(CharacterUpdate model)
         {
