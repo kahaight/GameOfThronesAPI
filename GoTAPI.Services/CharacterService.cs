@@ -32,7 +32,7 @@ namespace GoTAPI.Services
                     CauseOfDeath = model.CauseOfDeath,
                     HouseId = model.HouseId
                 };
-            using (var ctx=new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.Characters.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -50,14 +50,13 @@ namespace GoTAPI.Services
                         {
                             Name = e.Name,
                         });
-               
                                               
                 return query.OrderBy(s => s.Name).ToArray();
             }
         }
         public CharacterDetail ReadCharacterById(int id)
         {
-            using (var ctx =new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var characterEpisodeService = new CharacterEpisodeService();
                 var characteraffiliationService = new CharacterAffiliationService();
@@ -65,7 +64,7 @@ namespace GoTAPI.Services
                 return new CharacterDetail
                 {
                     Id = entity.Id,
-                    Name=entity.Name,
+                    Name = entity.Name,
                     Alive = entity.Alive,
                     EpisodeOfDeath = entity.EpisodeOfDeath,
                     House = entity.House.Name,
@@ -77,15 +76,28 @@ namespace GoTAPI.Services
                 };
             }
         }
-      
+        public IEnumerable<CharacterListItem> ReadCharactersByStatus(bool alive)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Characters.Where(e => e.Alive == alive)
+                    .Select(
+                    e =>
+                        new CharacterListItem
+                        {
+                            Name = e.Name,
+                        });
+                return query.ToArray();
+            }
+        }
         public bool UpdateCharacter(CharacterUpdate model)
         {
-          using (var ctx = new ApplicationDbContext())
-          {
-            var entity = 
-                        ctx
-                       .Characters
-                       .Single(e => e.Id == model.Id);
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                            ctx
+                           .Characters
+                           .Single(e => e.Id == model.Id);
                 entity.Name = model.Name;
                 entity.Alive = model.Alive;
                 entity.EpisodeOfDeath = model.EpisodeOfDeath;

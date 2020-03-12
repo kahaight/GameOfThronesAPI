@@ -39,7 +39,7 @@ namespace GoTAPI.Services
                     e =>
                         new AffiliationListItem
                         {
-                            Group = e.Group,
+                            Group = e.Group
                         }
                     );
                 return query.ToArray();
