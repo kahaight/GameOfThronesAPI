@@ -8,5 +8,9 @@ namespace GoTAPI.Models.AffiliationModels
 {
     public class AffiliationDetail
     {
+     /*   public int Id { get; set; }*/
+        public string Group { get; set; }
+        public string Description { get; set; }
+        public virtual IEnumerable<string> Characters { get; set; }
     }
 }

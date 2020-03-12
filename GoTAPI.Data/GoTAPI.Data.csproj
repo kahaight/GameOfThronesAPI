@@ -118,6 +118,10 @@
     <Compile Include="Migrations\202003101844448_add-migration Affiliation.designer.cs">
       <DependentUpon>202003101844448_add-migration Affiliation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003111723214_new seed.cs" />
+    <Compile Include="Migrations\202003111723214_new seed.designer.cs">
+      <DependentUpon>202003111723214_new seed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -143,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003101844448_add-migration Affiliation.resx">
       <DependentUpon>202003101844448_add-migration Affiliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003111723214_new seed.resx">
+      <DependentUpon>202003111723214_new seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

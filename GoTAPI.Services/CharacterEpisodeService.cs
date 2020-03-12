@@ -19,8 +19,8 @@ namespace GoTAPI.Services
         {
             _userId = userId;
         }
-      
-public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
+
+        public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
         {
             var entity =
                 new CharacterEpisode()
@@ -33,7 +33,6 @@ public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
                 ctx.CharacterEpisodes.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
-
         }
         public IEnumerable<string> ConvertCharEpisToEpis(ICollection<CharacterEpisode> characterEpisodes)
         {
@@ -41,7 +40,9 @@ public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
                         e =>
                             new EpisodeListItem
                             {
-                                Title = e.Episode.Title
+                                Title = e.Episode.Title,
+                                Season=e.Episode.Season,
+                                Episode=e.Episode.EpisodeNumber
                             }
                     );
             query.ToArray();
@@ -49,7 +50,8 @@ public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
 
             foreach (EpisodeListItem episodeListItem in query)
             {
-                episodeStrings.Add(episodeListItem.Title);
+                episodeStrings.Add($"{episodeListItem.Title}, (Season: {episodeListItem.Season}, Episode: {episodeListItem.Episode})");
+                /*episodeStrings.AddRange(episodeListItem.Title, episodeListItem.Season.ToString,episodeListItem.Episode.ToString);*/
             }
             return episodeStrings;
 
@@ -59,7 +61,7 @@ public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
         {
             var query = episodeCharacter.Select(
                         e =>
-                            new CharacterListItem 
+                            new CharacterListItem
                             {
                                 Name = e.Character.Name
                             }
@@ -67,7 +69,7 @@ public bool CreateCharacterEpisode(CharacterEpisodeCreate model)
             query.ToArray();
             List<string> characterStrings = new List<string>();
 
-            foreach(CharacterListItem characterListItem in query)
+            foreach (CharacterListItem characterListItem in query)
             {
                 characterStrings.Add(characterListItem.Name);
             }
