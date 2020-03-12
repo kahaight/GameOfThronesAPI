@@ -20,6 +20,7 @@ namespace GoTAPI.Controllers
             return episodeService;
         }
         [HttpPost]
+        [Route("api/Episode")]
         public IHttpActionResult Post(EpisodeCreate episode)
         {
             if (!ModelState.IsValid)
@@ -30,6 +31,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpGet]
+        [Route("api/Episode")]
         public IHttpActionResult Get()
         {
             EpisodeService episodeService = CreateEpisodeService();
@@ -37,6 +39,7 @@ namespace GoTAPI.Controllers
             return Ok(episodes);
         }
         [HttpGet]
+        [Route("api/Episode/{id}")]
         public IHttpActionResult Get(int id)
         {
             EpisodeService episodeService = CreateEpisodeService();
@@ -45,6 +48,7 @@ namespace GoTAPI.Controllers
 
         }
         [HttpPut]
+        [Route("api/Episode")]
         public IHttpActionResult Put(EpisodeUpdate model)
         {
             if (!ModelState.IsValid)
@@ -55,6 +59,7 @@ namespace GoTAPI.Controllers
             return Ok();
         }
         [HttpDelete]
+        [Route("api/Episode/{id}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateEpisodeService();

@@ -45,6 +45,7 @@ namespace GoTAPI.Controllers
             return Ok(character);
         }
         [HttpGet]
+        /*[Route]*/
         public IHttpActionResult Get(bool alive)
         {
             CharacterService characterService = CreateCharacterService();

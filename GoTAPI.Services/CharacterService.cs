@@ -47,9 +47,7 @@ namespace GoTAPI.Services
                 var query = ctx.Characters.Select(
                     e =>
                         new CharacterListItem
-                        {
-                            Name = e.Name,
-                        });
+                        {Name = e.Name});
                                               
                 return query.OrderBy(s => s.Name).ToArray();
             }
@@ -71,8 +69,8 @@ namespace GoTAPI.Services
                     Gender = entity.Gender,
                     Actor = entity.Actor,
                     CauseOfDeath = entity.CauseOfDeath,
-                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes),
-                    Affiliation= characteraffiliationService.ConvertCharAfilToAfil(entity.CharacterAffiliations)
+                    Affiliation= characteraffiliationService.ConvertCharAfilToAfil(entity.CharacterAffiliations),
+                    Episodes = characterEpisodeService.ConvertCharEpisToEpis(entity.CharacterEpisodes)
                 };
             }
         }
@@ -84,9 +82,7 @@ namespace GoTAPI.Services
                     .Select(
                     e =>
                         new CharacterListItem
-                        {
-                            Name = e.Name,
-                        });
+                        {Name = e.Name,});
                 return query.ToArray();
             }
         }
