@@ -40,20 +40,6 @@ namespace GoTAPI.Services
 
         }
 
-     /*   public IEnumerable<CharacterListItem> ReadCharacters()
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query = ctx.Characters.Select(
-                    e =>
-                        new CharacterListItem
-                        {
-                            Name = e.Name,
-                        });
-                return query.ToArray();
-            }
-        }*/
-
         public IEnumerable<CharacterListItem> ReadCharacters()
         {
             using (var ctx = new ApplicationDbContext())
@@ -64,37 +50,11 @@ namespace GoTAPI.Services
                         {
                             Name = e.Name,
                         });
-               /* query.ToArray();*/
-                 
-              /*  Array.Sort(query, (x, y) => (String.Compare(x.Name, y.Name);*/
-
-
-               /* IEnumerable<string> queries = from word in query
-                                              orderby word ascending
-                                              select word;*/
+               
                                               
                 return query.OrderBy(s => s.Name).ToArray();
             }
         }
-
-        /*string[] words = { "the", "quick", "brown", "fox", "jumps" };
-
-        IEnumerable<string> query = from word in words
-                                    orderby word.Substring(0, 1) descending
-                                    select word;  
-  
-foreach (string str in query)  
-    Console.WriteLine(str);  */
-  
-/* This code produces the following output:  
-  
-    the  
-    quick  
-    jumps  
-    fox  
-    brown  
-*/
-
         public CharacterDetail ReadCharacterById(int id)
         {
             using (var ctx =new ApplicationDbContext())
