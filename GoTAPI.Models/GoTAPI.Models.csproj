@@ -61,6 +61,8 @@
     <Compile Include="AffiliationModels\AffiliationDetail.cs" />
     <Compile Include="AffiliationModels\AffiliationListItem.cs" />
     <Compile Include="AffiliationModels\AffiliationUpdate.cs" />
+    <Compile Include="CharacterAffiliationModels\CharacterAffiliationCreate.cs" />
+    <Compile Include="CharacterAffiliationModels\CharacterAffiliationUpdate.cs" />
     <Compile Include="CharacterEpisodeModels\CharacterEpisodeCreate.cs" />
     <Compile Include="CharacterModels\CharacterCreate.cs" />
     <Compile Include="CharacterModels\CharacterDetail.cs" />
