@@ -54,7 +54,7 @@ namespace GoTAPI.Services
                 return new AffiliationDetail
                 { Group = entity.Group,
                   Description=entity.Description,
-                  Characters = characterAffiliationService.ConvertCharAfilToAfil(entity.CharacterAffiliations)
+                  Characters = characterAffiliationService.ConvertCharAfilToChar(entity.CharacterAffiliations)
                 };
 
             }
