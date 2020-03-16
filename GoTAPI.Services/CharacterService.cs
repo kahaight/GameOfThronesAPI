@@ -44,12 +44,8 @@ namespace GoTAPI.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.Characters.Select(
-                    e =>
-                        new CharacterListItem
-                        {Name = e.Name});
-                                              
-                return query.OrderBy(s => s.Name).ToArray();
+                var query = ctx.Characters.Select( e => new CharacterListItem {Name = e.Name, Id=e.Id});
+                 return query.OrderBy(s => s.Name).ToArray();
             }
         }
         public CharacterDetail ReadCharacterById(int id)
@@ -121,9 +117,7 @@ namespace GoTAPI.Services
             var query = characters.Select(
                         e =>
                             new CharacterListItem
-                            {
-                                Name = e.Name
-                            }
+                            {Name = e.Name}
                     );
             return query.ToArray();
         }
