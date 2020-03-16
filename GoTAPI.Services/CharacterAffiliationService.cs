@@ -46,7 +46,8 @@ namespace GoTAPI.Services
                         e =>
                             new AffiliationListItem
                             {
-                                Group = e.Affiliation.Group
+                                Group = e.Affiliation.Group,
+                                CharacterAffiliationDescription = e.Description
                             }
                     );
             query.ToArray();
@@ -54,7 +55,7 @@ namespace GoTAPI.Services
 
             foreach (AffiliationListItem affiliationListItem in query)
             {
-                affiliationStrings.Add(affiliationListItem.Group);
+                affiliationStrings.Add($"{affiliationListItem.Group}: {affiliationListItem.CharacterAffiliationDescription}");
             }
             return affiliationStrings;
         }
