@@ -104,15 +104,6 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -124,21 +115,12 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Konrad Haight - konradhaight@gmail.com
-Marshall Davis - 
-Jack McCoy - 
+* Konrad Haight - konradhaight@gmail.com
+* Marshall Davis - 
+* Jack McCoy - 
 
 Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/kahaight/GameOfThronesAPI)
 
