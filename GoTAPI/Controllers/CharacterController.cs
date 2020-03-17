@@ -38,7 +38,6 @@ namespace GoTAPI.Controllers
             var characters = characterService.ReadCharacters();
             return Ok(characters);
         }
-        //add GET (bool isAlive)
         [HttpGet]
         [Route("api/Character/{id}")]
         public IHttpActionResult Get(int id)
