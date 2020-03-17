@@ -2,6 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+
   <a href="https://github.com/jackmccoy34/GameOfThronesAPI">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
@@ -33,9 +34,6 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
@@ -57,15 +55,11 @@ From the server, a response containing the desired data is returned. The data is
 will be displayed on the user's interface. This API can be used by anyone with a need for specified Game of Thrones
 information, who would like to shorten their research time.  
 
-
-
 ### Built With
 
 * [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) - Development Environment
 * [Postman](https://www.postman.com/) - API Client
 * [Github](https://github.com/kahaight/GameOfThronesAPI) - Host/Collaboration Service
-
-
 
 
 <!-- GETTING STARTED -->
@@ -92,15 +86,12 @@ git clone https://github.com/jackmccoy34/GameOfThronesAPI.git
 npm install
 ```
 
-
-
-<!-- USAGE EXAMPLES --> ?DROP?
+<!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -117,35 +108,18 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - jackmccoy34@gmail.com
+* Konrad Haight - konradhaight@gmail.com
+* Marshall Davis - 
+* Jack McCoy - jackmccoy34@gmail.com
 
-Project Link: [https://github.com/jackmccoy34/GameOfThronesAPI](https://github.com/jackmccoy34/GameOfThronesAPI)
-
-
+Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/kahaight/GameOfThronesAPI)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Game of Thrones Wiki](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
+* [A Wiki of Ice and Fire](https://awoiaf.westeros.org/index.php/Main_Page)
+* [IMDB](https://www.imdb.com/)
+* [Game of Thrones Death Timeline](http://deathtimeline.com/)
+* [Wikipedia Episode List](https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes)
 
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
