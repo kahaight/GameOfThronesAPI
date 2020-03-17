@@ -8,10 +8,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">GameOfThronesAPI</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    A complete guide to HBO's Game of Thrones
     <br />
 
     <a href="https://github.com/jackmccoy34/GameOfThronesAPI"><strong>Explore the docs »</strong></a>
