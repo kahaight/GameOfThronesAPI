@@ -3,6 +3,7 @@
 <br />
 <p align="center">
 
+
   <a href="https://github.com/jackmccoy34/GameOfThronesAPI">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
@@ -12,6 +13,7 @@
   <p align="center">
     YOUR_SHORT_DESCRIPTION
     <br />
+
     <a href="https://github.com/jackmccoy34/GameOfThronesAPI"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -34,6 +36,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
+* [Contributing](#contributing)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
@@ -60,38 +63,53 @@ information, who would like to shorten their research time.
 * [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) - Development Environment
 * [Postman](https://www.postman.com/) - API Client
 * [Github](https://github.com/kahaight/GameOfThronesAPI) - Host/Collaboration Service
+* Entity Framework
+* Owin
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy of the Game of Thrones database up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+You will need a copy of Visual Studio 2019. Follow the link below should you do not have the free software installed already.
+* Visual Studio 2019
 ```sh
-npm install npm@latest -g
+Download Link: [MS Visual Studio Download](https://visualstudio.microsoft.com/downloads/)
 ```
 
-### Installation
+### GoT API
  
-1. Clone the GameOfThronesAPI
+1. Clone the API
 ```sh
-git clone https://github.com/jackmccoy34/GameOfThronesAPI.git
+[Clone the API for Visual Studios Here](https://github.com/kahaight/GameOfThronesAPI)
 ```
-2. Install NPM packages
+2. Be sure to restore the NuGet Packages for the GoTAPI solution
 ```sh
-npm install
+Right click on Solution 'GoTAPI' and click on "restore NuGet Packages" and then bring in using statements needed.
 ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+This API is meant to be used as a resource that cross-cordinates Houses, Characters, Affilitions, and Episodes in various ways to help broaden an understanding of HBO's hit series Game of Thrones.
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+When researching we can get a list, in this case of characters, with Id numbers as seen below. Let's note Tyrion's Id.
+
+[![Character List Screen Shot][screenshot-1]]
+
+
+Then by adding a forward slash and the Id number of Tyrion we can bring up Tyrion's corresponding detail page.
+
+[![Tyrion detail Page 1][screenshot-2]]
+
+
+These details pages are fairly extensive as we combine 4 independent classes using 3 joining tables to present a character's; Id, Name, wheter they are alive, their episode of death, House, Gender, Actor, Cause of Death, Episodes, and Affiliations.
+
+[!Tyrion detail Page 2][screenshot-3]] 
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -104,7 +122,6 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
 <!-- CONTACT -->
 ## Contact
 
@@ -116,10 +133,27 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
 * [Game of Thrones Wiki](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
 * [A Wiki of Ice and Fire](https://awoiaf.westeros.org/index.php/Main_Page)
 * [IMDB](https://www.imdb.com/)
 * [Game of Thrones Death Timeline](http://deathtimeline.com/)
 * [Wikipedia Episode List](https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes)
 
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[screenshot-2]: Images\InkedTyrion first detail shot.jpg
+[screenshot-1]: Images\Tyrion character list shot with pen highlight.png
+[screenshot-3]: Images\InkedTyrion second detail shot.jpg
