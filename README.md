@@ -2,7 +2,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
+
+
+  <a href="https://github.com/jackmccoy34/GameOfThronesAPI">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -11,14 +13,15 @@
   <p align="center">
     YOUR_SHORT_DESCRIPTION
     <br />
-    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
+
+    <a href="https://github.com/jackmccoy34/GameOfThronesAPI"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo">View Demo</a>
+    <a href="https://github.com/jackmccoy34/GameOfThronesAPI">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo/issues">Report Bug</a>
+    <a href="https://github.com/jackmccoy34/GameOfThronesAPI/issues">GameOfThronesAPIrt Bug</a>
     ·
-    <a href="https://github.com/github_username/repo/issues">Request Feature</a>
+    <a href="https://github.com/jackmccoy34/GameOfThronesAPI/issues">Request Feature</a>
   </p>
 </p>
 
@@ -33,9 +36,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
@@ -44,19 +45,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Game of Thrones API][C:\Users\jack\OneDrive\Pictures]](https://github.com/kahaight/GameOfThronesAPI)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+`jackmccoy34`, `GameOfThronesAPI`, `twitter_handle`, `jackmccoy34@gmail.com`
 
+We've created an API Web Application related to the fantasy world portrayed in the "Game of Thrones" telivision series.
+The intended use for our project is to have the ability to retreive specific Game of Thrones information from a user's request. 
+The client will send a request specifying which endpoint to be used. The API then takes this request to the server. 
+From the server, a response containing the desired data is returned. The data is then converted into a readable response and 
+will be displayed on the user's interface. This API can be used by anyone with a need for specified Game of Thrones
+information, who would like to shorten their research time.  
 
 ### Built With
 
-* []()
-* []()
-* []()
-
+* [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) - Development Environment
+* [Postman](https://www.postman.com/) - API Client
+* [Github](https://github.com/kahaight/GameOfThronesAPI) - Host/Collaboration Service
+* Entity Framework
+* Owin
 
 
 <!-- GETTING STARTED -->
@@ -83,8 +91,6 @@ Download Link: [MS Visual Studio Download](https://visualstudio.microsoft.com/do
 Right click on Solution 'GoTAPI' and click on "restore NuGet Packages" and then bring in using statements needed.
 ```
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 This API is meant to be used as a resource that cross-cordinates Houses, Characters, Affilitions, and Episodes in various ways to help broaden an understanding of HBO's hit series Game of Thrones.
@@ -105,18 +111,6 @@ These details pages are fairly extensive as we combine 4 independent classes usi
 [!Tyrion detail Page 2][screenshot-3]] 
 
 
-
-
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -128,33 +122,22 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+* Konrad Haight - konradhaight@gmail.com
+* Marshall Davis - 
+* Jack McCoy - jackmccoy34@gmail.com
 
-Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
-
-
+Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/kahaight/GameOfThronesAPI)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
+* [Game of Thrones Wiki](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
+* [A Wiki of Ice and Fire](https://awoiaf.westeros.org/index.php/Main_Page)
+* [IMDB](https://www.imdb.com/)
+* [Game of Thrones Death Timeline](http://deathtimeline.com/)
+* [Wikipedia Episode List](https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
