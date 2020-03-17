@@ -19,23 +19,53 @@ namespace GoTAPI.Controllers
             return houseService;
         }
         [HttpPost]
+        [Route("api/House")]
         public IHttpActionResult Post(HouseCreate episode)
         {
-
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateHouseService();
+            if (!service.CreateHouse(episode))
+                return InternalServerError();
+            return Ok();
         }
         [HttpGet]
+        [Route("api/House")]
         public IHttpActionResult Get()
         {
+            HouseService houseService = CreateHouseService();
+            var houses = houseService.ReadHouses();
+            return Ok(houses);
         }
         [HttpGet]
-        public IHttpActionResult Get(int houseId)
+        [Route("api/House/{id}")]
+        public IHttpActionResult Get(int id)
         {
-
+            HouseService houseService = CreateHouseService();
+            var house = houseService.ReadHouseById(id);
+            return Ok(house);
         }
         [HttpPut]
-        public IHttpActionResult Put([FromUri]int houseId, [FromBody] HouseUpdate model)
+        [Route("api/House")]
+        public IHttpActionResult Put(HouseUpdate model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateHouseService();
+            if (!service.UpdateHouse(model))
+                return InternalServerError();
+            return Ok();
+        }
+        [HttpDelete]
+        [Route("api/House/{id}")]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateHouseService();
 
+            if (!service.DeleteHouse(id))
+                return InternalServerError();
+
+            return Ok();
         }
     }
 }

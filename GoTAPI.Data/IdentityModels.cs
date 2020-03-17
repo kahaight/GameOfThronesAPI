@@ -3,6 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using GoTAPI.Data.DataClasses;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -37,6 +38,8 @@ namespace GoTAPI.Models
         public DbSet<Character> Characters { get; set; }
         public DbSet<Episode> Episodes { get; set; }
         public DbSet<CharacterEpisode> CharacterEpisodes { get; set; }
+        public DbSet<Affiliation> Affiliations { get; set; }
+        public DbSet<CharacterAffiliation> CharacterAffiliations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

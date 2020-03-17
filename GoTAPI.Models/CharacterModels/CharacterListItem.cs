@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace GoTAPI.Models.CharacterModels
 {
     public class CharacterListItem
-    {
+    { public string Name { get; set; }
+      public int Id { get; set; } 
     }
 }
