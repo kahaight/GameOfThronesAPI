@@ -111,12 +111,12 @@ When researching we can get a list, in this case of characters, with Id numbers 
 
 Then by adding a forward slash and the Id number of Tyrion we can bring up Tyrion's corresponding detail page.
 
-[![Tyrion detail Page 1][screenshot-2]]
+[![Tyrion First Detail Page][screenshot-2]]
 
 
 These details pages are fairly extensive as we combine 4 independent classes using 3 joining tables to present a character's; Id, Name, wheter they are alive, their episode of death, House, Gender, Actor, Cause of Death, Episodes, and Affiliations.
 
-[!Tyrion detail Page 2][screenshot-3]] 
+[!Tyrion Second Detail Page][screenshot-3]] 
 
 
 <!-- CONTRIBUTING -->
@@ -162,6 +162,6 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[screenshot-2]: Images/Detail1.jpg
 [screenshot-1]: Images/CharacterList.png
+[screenshot-2]: Images/Detail1.jpg
 [screenshot-3]: Images/Detail2.jpg
