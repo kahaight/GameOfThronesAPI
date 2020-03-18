@@ -74,27 +74,35 @@ To get a local copy of the Game of Thrones database up and running follow these 
 
 ### Prerequisites
 
-You will need a copy of Visual Studio 2019. Follow the link below should you do not have the free software installed already.
-* Visual Studio 2019
-```sh
-Download Link: [MS Visual Studio Download](https://visualstudio.microsoft.com/downloads/)
-```
+You will need a copy of Visual Studio 2019 as well as Postman to utilize the API's endpoints easily. Follow the links below should you do not have the free software installed already.
+* [Visual Studio Code](https://visualstudio.microsoft.com/downloads/)
 
-### GoT API
- 
-1. Clone the API
-```sh
+* [Postman](https://www.postman.com/)
+
+
+### Game of Thrones API
+```sh 
+1. Clone the Solution from GitHub using the link the solution below. After navigating there and cloning open using Visual Studio.
+```
 [Clone the API for Visual Studios Here](https://github.com/kahaight/GameOfThronesAPI)
-```
-2. Be sure to restore the NuGet Packages for the GoTAPI solution
+
+
 ```sh
-Right click on Solution 'GoTAPI' and click on "restore NuGet Packages" and then bring in using statements needed.
+2. Be sure to restore the NuGet Packages for the GoTAPI solution
 ```
+Right click on your opened Solution 'GoTAPI' and select "restore NuGet Packages" (and then bring in using statements if needed).
+
+
+```sh
+3.Run the Solution and open Postman to utilize the database
+```
+With a running solution and Postman get features ready to be utilized there are a myriad of different endpoints, most importantly 9 GET endpoints for reference in any Game of Thrones lookup.
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 This API is meant to be used as a resource that cross-cordinates Houses, Characters, Affilitions, and Episodes in various ways to help broaden an understanding of HBO's hit series Game of Thrones.
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
 
 When researching we can get a list, in this case of characters, with Id numbers as seen below. Let's note Tyrion's Id.
 
@@ -126,7 +134,7 @@ Contributions are what make the open source community such an amazing place to b
 ## Contact
 
 * Konrad Haight - konradhaight@gmail.com
-* Marshall Davis - 
+* Marshall Davis - marmadav@gmail.com
 * Jack McCoy - jackmccoy34@gmail.com
 
 Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/kahaight/GameOfThronesAPI)
@@ -154,6 +162,6 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[screenshot-2]: Images\InkedTyrion first detail shot.jpg
-[screenshot-1]: Images\Tyrion character list shot with pen highlight.png
-[screenshot-3]: Images\InkedTyrion second detail shot.jpg
+[screenshot-2]: Images/InkedTyrion first detail shot.jpg
+[screenshot-1]: Images/Tyrion character list shot with pen highlight.png
+[screenshot-3]: Images/InkedTyrion second detail shot.jpg
