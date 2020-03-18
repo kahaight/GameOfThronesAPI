@@ -116,7 +116,7 @@ Then by adding a forward slash and the Id number of Tyrion we can bring up Tyrio
 
 These details pages are fairly extensive as we combine 4 independent classes using 3 joining tables to present a character's; Id, Name, wheter they are alive, their episode of death, House, Gender, Actor, Cause of Death, Episodes, and Affiliations.
 
-[!Tyrion Second Detail Page][screenshot-3]] 
+[![Tyrion Second Detail Page][screenshot-3]] 
 
 
 <!-- CONTRIBUTING -->
