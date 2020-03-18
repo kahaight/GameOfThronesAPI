@@ -162,6 +162,6 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[screenshot-2]: Images/InkedTyrion first detail shot.jpg
-[screenshot-1]: Images/Tyrion character list shot with pen highlight.png
-[screenshot-3]: Images/InkedTyrion second detail shot.jpg
+[screenshot-2]: Images/Detail1.jpg
+[screenshot-1]: Images/CharacterList.png
+[screenshot-3]: Images/Detail2.jpg
