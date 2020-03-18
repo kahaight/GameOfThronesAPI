@@ -3,10 +3,10 @@
 <br />
 <p align="center">
 
-  <h3 align="center">GameOfThronesAPI</h3>
+  <h3 align="center">An API for HBO's Game of Thrones</h3>
 
   <p align="center">
-    A complete guide to HBO's Game of Thrones
+    What else were we going to do?
     <br />
   </p>
 </p>
