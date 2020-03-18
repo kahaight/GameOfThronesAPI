@@ -3,25 +3,11 @@
 <br />
 <p align="center">
 
-
-  <a href="https://github.com/jackmccoy34/GameOfThronesAPI">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">GameOfThronesAPI</h3>
+  <h3 align="center">An API for HBO's Game of Thrones</h3>
 
   <p align="center">
-    A complete guide to HBO's Game of Thrones
+    What else were we going to do?
     <br />
-
-    <a href="https://github.com/jackmccoy34/GameOfThronesAPI"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/jackmccoy34/GameOfThronesAPI">View Demo</a>
-    ·
-    <a href="https://github.com/jackmccoy34/GameOfThronesAPI/issues">GameOfThronesAPIrt Bug</a>
-    ·
-    <a href="https://github.com/jackmccoy34/GameOfThronesAPI/issues">Request Feature</a>
   </p>
 </p>
 
@@ -45,11 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Game of Thrones API][C:\Users\jack\OneDrive\Pictures]](https://github.com/kahaight/GameOfThronesAPI)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`jackmccoy34`, `GameOfThronesAPI`, `twitter_handle`, `jackmccoy34@gmail.com`
+[![Game of Thrones API][Logo]]
 
 We've created an API Web Application related to the fantasy world portrayed in the "Game of Thrones" telivision series.
 The intended use for our project is to have the ability to retreive specific Game of Thrones information from a user's request. 
@@ -146,6 +128,7 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 * [IMDB](https://www.imdb.com/)
 * [Game of Thrones Death Timeline](http://deathtimeline.com/)
 * [Wikipedia Episode List](https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes)
+* [Jamie Sale](https://www.jamiesale-cartoonist.com/10-game-of-thrones-cartoons/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -165,3 +148,4 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 [screenshot-1]: Images/CharacterList.png
 [screenshot-2]: Images/Detail1.jpg
 [screenshot-3]: Images/Detail2.jpg
+[Logo]: Images/Logo.png
