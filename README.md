@@ -128,7 +128,7 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 * [IMDB](https://www.imdb.com/)
 * [Game of Thrones Death Timeline](http://deathtimeline.com/)
 * [Wikipedia Episode List](https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes)
-* [Jamie Sale] (https://www.jamiesale-cartoonist.com/10-game-of-thrones-cartoons/)
+* [Jamie Sale](https://www.jamiesale-cartoonist.com/10-game-of-thrones-cartoons/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -148,4 +148,4 @@ Project Link: [https://github.com/kahaight/GameOfThronesAPI](https://github.com/
 [screenshot-1]: Images/CharacterList.png
 [screenshot-2]: Images/Detail1.jpg
 [screenshot-3]: Images/Detail2.jpg
-[Logo]: Images/Logo.jpg
+[Logo]: Images/Logo.png
