@@ -9,5 +9,6 @@ namespace GoTAPI.Models.HouseModels
     public class HouseListItem
     {
         public string Name {get; set;}
+        public int Id { get; set; }
     }
 }

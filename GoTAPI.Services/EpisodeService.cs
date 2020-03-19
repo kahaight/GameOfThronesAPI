@@ -49,7 +49,8 @@ namespace GoTAPI.Services
                                 {
                                     Title = e.Title,
                                     Season=e.Season,
-                                    Episode=e.EpisodeNumber
+                                    Episode=e.EpisodeNumber,
+                                    id=e.Id
                                 }
                         );
                 return query.ToArray();

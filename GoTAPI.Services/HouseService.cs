@@ -42,7 +42,9 @@ namespace GoTAPI.Services
                             e =>
                                 new HouseListItem
                                 {
-                                    Name = e.Name
+                                    Name = e.Name,
+                                    Id=e.Id
+
                                 }
                         );
                 return query.ToArray();

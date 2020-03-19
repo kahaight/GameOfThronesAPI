@@ -10,6 +10,7 @@ namespace GoTAPI.Models.EpisodeModels
     public class EpisodeListItem
     {
         public string Title { get; set; }
+        public int id { get; set; }
         public int Season { get; set; }
         public int Episode { get; set; }
     }
