@@ -117,7 +117,8 @@ namespace GoTAPI.Services
             var query = characters.Select(
                         e =>
                             new CharacterListItem
-                            {Name = e.Name}
+                            {Name = e.Name,
+                            Id = e.Id}
                     );
             return query.ToArray();
         }
